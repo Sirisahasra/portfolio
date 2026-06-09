@@ -5,90 +5,170 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siri Sahasra | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <nav>
       <h1 class="logo">Siri<span>Sahasra</span></h1>
-      <ul>
+
+      <ul id="navLinks">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <div class="menu" onclick="toggleMenu()">☰</div>
     </nav>
   </header>
 
   <section id="hero">
-    <div class="intro">
-      <h2>Hello, I'm <span>Siri Sahasra</span> 👋</h2>
-      <p>A passionate <strong>Developer</strong> with expertise in building efficient, interactive, and creative digital experiences.</p>
-      <button onclick="scrollToSection('contact')">Get in Touch</button>
+    <div class="hero-content">
+      <p class="tag">B.Tech CSE @ IIT Indore</p>
+      <h2>Hello, I'm <span>Siri Sahasra Gujjula</span></h2>
+      <p>
+        A passionate developer interested in software engineering, web development,
+        blockchain, databases, and basic machine learning.
+      </p>
+
+      <div class="hero-buttons">
+        <button onclick="scrollToSection('projects')">View Projects</button>
+        <button class="outline" onclick="scrollToSection('contact')">Contact Me</button>
+      </div>
     </div>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I’m a dedicated learner and developer with a deep interest in software engineering, web technologies, and AI.  
-      I love solving real-world problems using code and turning ideas into interactive web applications.
+      I am a Computer Science and Engineering student at IIT Indore. I enjoy building
+      useful applications, solving DSA problems, and working on projects involving
+      full-stack development, blockchain, databases, and OCR-based systems.
     </p>
   </section>
 
   <section id="skills">
     <h2>Technical Skills</h2>
-    <div class="skills-container">
-      <div class="skill">C++</div>
-      <div class="skill">Data Structures & Algorithms</div>
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">React</div>
-      <div class="skill">MySQL</div>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Languages</h3>
+        <p>C++, Python, JavaScript, SQL</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Core CS</h3>
+        <p>DSA, OOP, DBMS</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Machine Learning</h3>
+        <p>Supervised Learning, Basic ML Algorithms, Computer Vision Basics</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Blockchain</h3>
+        <p>Solidity, Hardhat, MetaMask, Ethers.js, IPFS</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Libraries / Frameworks</h3>
+        <p>OpenCV, NumPy, Pandas, Flask, React.js</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Tools</h3>
+        <p>VS Code, Jupyter Notebook, LaTeX</p>
+      </div>
     </div>
   </section>
 
   <section id="projects">
-    <h2>My Projects</h2>
+    <h2>Projects</h2>
+
     <div class="project-grid">
 
       <div class="project-card">
-        <div class="card-content">
-          <h3>PolyOCR – Multilingual Text Recognition</h3>
-          <p>
-            A machine learning project for multilingual Optical Character Recognition using deep learning models
-            for text detection and recognition.
-          </p>
+        <h3>BlockBid</h3>
+        <p class="project-type">Decentralized Auction System</p>
+        <p class="tech">Solidity, React.js, Ethers.js, MetaMask, Hardhat, OpenZeppelin, IPFS</p>
+        <p>
+          Built an Ethereum-based decentralized auction platform supporting secure bidding,
+          withdrawal handling, settlement, and automated winner selection.
+        </p>
+        <div class="project-links">
+          <a href="https://cs218-strangerbitz-8zx3.onrender.com/" target="_blank">Live Demo</a>
+          <a href="https://github.com/Sirisahasra/CS218-StrangerBitz-DecentralisedAuctionSystem" target="_blank">GitHub</a>
         </div>
-        <a href="#" target="_blank" class="project-link">View Project</a>
       </div>
 
       <div class="project-card">
-        <div class="card-content">
-          <h3>Smart City Database System</h3>
-          <p>
-            A DBIS project to design and manage smart city data efficiently with optimized queries and scalable relational models.
-          </p>
+        <h3>Urban Nexus</h3>
+        <p class="project-type">Smart City Management Platform</p>
+        <p class="tech">Flask, MySQL, HTML, CSS, JavaScript</p>
+        <p>
+          Developed a full-stack smart city platform for complaint management,
+          utilities tracking, citizen services, and admin workflows.
+        </p>
+        <div class="project-links">
+          <a href="https://city-sync-9wra.onrender.com/" target="_blank">Live Demo</a>
+          <a href="https://github.com/Sirisahasra/Urban-Nexus" target="_blank">GitHub</a>
         </div>
-        <a href="#" target="_blank" class="project-link">View Project</a>
       </div>
 
+      <div class="project-card">
+        <h3>PolyOCR</h3>
+        <p class="project-type">Multilingual OCR System</p>
+        <p class="tech">Python, OpenCV, PaddleOCR, EasyOCR, TrOCR, Flask</p>
+        <p>
+          Created a multilingual OCR system supporting 10+ languages for printed and
+          handwritten text recognition with JSON outputs and bounding boxes.
+        </p>
+        <div class="project-links">
+          <a href="https://huggingface.co/spaces/HimaHarika2827/polyocr" target="_blank">Demo</a>
+          <a href="https://github.com/Sirisahasra/PolyOCR_Project" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+
+    <div class="achievement-box">
+      <p><strong>JEE Advanced 2024:</strong> Secured AIR 4644</p>
+      <p><strong>JEE Main 2024:</strong> Achieved 99.52 Percentile</p>
+      <p><strong>Codeforces:</strong> Max Rating 1302 and 220+ problems solved</p>
+      <p><strong>LeetCode:</strong> Solved 100+ problems</p>
+      <p><strong>CodeChef:</strong> Highest Rating 1364</p>
+      <p>
+        <strong>Vishwakarma Awards 2025:</strong>
+        Qualified for Prototype Stage
+        <a href="https://drive.google.com/file/d/1kncax4stJBP9IDtFR732hniXCLkTMgvX/view?usp=sharing" target="_blank">Certificate</a>
+      </p>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>I'd love to collaborate or discuss new opportunities!</p>
+    <p>Open to internships, collaborations, and project opportunities.</p>
+
     <div class="contact-info">
-      <p>📧 <a href="mailto:siri.sahasra@example.com">siri.sahasra@example.com</a></p>
-      <p>💼 <a href="https://linkedin.com/in/sirisahasra" target="_blank">linkedin.com/in/sirisahasra</a></p>
+      <p>📧 <a href="mailto:sirisahasrareddy07@gmail.com">sirisahasrareddy07@gmail.com</a></p>
+      <p>💻 <a href="https://github.com/Sirisahasra" target="_blank">github.com/Sirisahasra</a></p>
+      <p>💼 <a href="https://www.linkedin.com/in/siri-sahasra-gujjula-2a8a60321/" target="_blank">LinkedIn</a></p>
+      <p>🧠 <a href="https://leetcode.com/u/SiriSahasra/" target="_blank">LeetCode</a></p>
+      <p>⚡ <a href="https://codeforces.com/profile/siri_sahasra" target="_blank">Codeforces</a></p>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Siri Sahasra | Built with ❤️ using HTML, CSS, and JavaScript</p>
+    <p>© 2026 Siri Sahasra Gujjula | Built with HTML, CSS, and JavaScript</p>
   </footer>
 
   <script src="script.js"></script>
